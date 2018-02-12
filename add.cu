@@ -37,9 +37,12 @@ int main(void)
     maxError = fmax(maxError, fabs(y[i]-3.0f));
   std::cout << "Max error: " << maxError << std::endl;
 
+  cudaDeviceReset();
+
   // Free memory
   cudaFree(x);
   cudaFree(y);
   
+
   return 0;
 }
